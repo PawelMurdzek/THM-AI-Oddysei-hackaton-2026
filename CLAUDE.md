@@ -101,6 +101,21 @@ STUCK / WANT A NEW TOOL
 | **`/find-skills`** | Pawel wishes a skill existed for X | `npx skills find <query>` — installs new skills from skills.sh. |
 | **`/ctf-writeup`** | **Don't use for THM event.** Generic single-file writeup generator | Our `thm-writeup` is the dedicated tool. Only fall back to `/ctf-writeup` if Pawel explicitly asks for the "submission-style" format. |
 
+### Extended AI/LLM skills (pulled from skills.sh)
+
+These augment `/ctf-ai-ml` with more focused taxonomies. Install/verify via `INSTALL.md` § 4d. Live in `~/.agents/skills/`.
+
+| Skill | Source | Use when… |
+|---|---|---|
+| **`owasp-security`** | `hoodini/ai-agents-skills` | Triaging an LLM chal — map it to OWASP LLM Top 10 (LLM01 prompt injection, LLM02 insecure output, LLM06 sensitive info disclosure, etc.) before picking the attack. |
+| **`llm-prompt-injection`** | `yaklang/hack-skills` | Need a fresh prompt-injection technique catalogue beyond what `ctf-ai-ml/llm-attacks.md` ships with. |
+| **`llm-security`** | `semgrep/skills` | Reading server-side code that wraps an LLM — gives static-analysis patterns for unsafe LLM integrations (good for spotting where injection lands). |
+| **`adversarial-machine-learning`** | `gmh5225/awesome-ai-security` | FGSM/PGD/C&W adversarial examples, perturbation budgets, classifier evasion. Niche but unique vs. `ctf-ai-ml`. |
+| **`shannon-ai-pentester`** | `aradotso/trending-skills` | AI-driven pentest workflow. **⚠ flagged High Risk** during install — review prompts before invoking, only use within THM authorization scope. |
+| **`skill-vetter`** | `useai-pro/openclaw-skills-security` | Auditing other skills before trusting them with full agent permissions. Run periodically as new skills accrue. |
+
+Listing what's actually on disk: `npx skills list -g` (global) vs `npx skills list` (project). Don't confuse with `/find-skills` which searches the online catalog for **new** ones.
+
 ### How they chain in a typical session
 
 1. Pawel: *"new chal: here's a URL and a Python file"*

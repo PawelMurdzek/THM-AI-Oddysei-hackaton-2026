@@ -31,6 +31,28 @@ The skill ships with three reference files. Pull them when relevant:
 | `model-attacks.md` | Model weight perturbation, model inversion via gradients, encoder collision, LoRA merging, model extraction via API, membership inference |
 | `adversarial-ml.md` | FGSM/PGD/C&W adversarial examples, adversarial patches, classifier evasion, data poisoning, backdoor detection |
 
+## Augmenting skills (skills.sh)
+
+Pulled in via `npx skills add ...` (see [`INSTALL.md` § 4d](../INSTALL.md#4d-optional-extended-aisecurity-skills)). Reach for these when `ctf-ai-ml` alone isn't enough:
+
+| Skill | Trigger |
+|---|---|
+| `owasp-security` | "What OWASP LLM category is this chal?" — quick taxonomy lookup |
+| `llm-prompt-injection` | Need a deeper bag of injection payloads than `llm-attacks.md` has |
+| `llm-security` | Reading the server-side LLM wrapper code, hunting for the injection landing zone |
+| `adversarial-machine-learning` | Image/audio classifier chal — need FGSM/PGD math |
+| `shannon-ai-pentester` | Want a full AI-pentest workflow. ⚠ flagged High Risk — review prompts first |
+| `skill-vetter` | Audit another skill before granting it full agent permissions |
+
+### Listing what's installed
+
+```bash
+npx skills list -g    # global (user-level) installs
+npx skills list       # project-level installs
+```
+
+> `find-skills` searches the **online catalog** for new skills; `list` shows what's **already on disk**. Different tools — don't confuse them.
+
 ## `solve-challenge` workflow reminders
 
 1. **CTFd detection first** — `curl -s $CTF_URL/api/v1/`; if positive, ask Paweł for his CTFd API token (he must generate it in Settings → Access Tokens).

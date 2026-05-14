@@ -104,7 +104,18 @@ The repo leans heavily on the [`ljagiello/ctf-skills`](https://github.com/ljagie
 | **`/ctf-ai-ml`** | The main hammer for this event. Bundles `llm-attacks.md`, `model-attacks.md`, `adversarial-ml.md`. |
 | **`/ctf-web`** | Web frontend layer that often wraps the LLM. |
 | **`/ctf-reverse`, `/ctf-pwn`, `/ctf-crypto`, `/ctf-forensics`, `/ctf-osint`, `/ctf-malware`, `/ctf-misc`** | Specialized category solvers for mixed challenges. |
-| **`/find-skills`** | Discovery — search and install new skills from skills.sh. |
+| **`/find-skills`** | Discovery — search the online catalog for new skills from skills.sh. |
+
+Plus extended AI-security skills pulled from `skills.sh` (see [`INSTALL.md` § 4d](./INSTALL.md#4d-optional-extended-aisecurity-skills)):
+
+| Skill | What it adds |
+|---|---|
+| `owasp-security` | OWASP LLM Top 10 taxonomy for triage |
+| `llm-prompt-injection` | Dedicated prompt-injection technique catalogue |
+| `llm-security` | Static-analysis patterns for unsafe LLM integrations (semgrep) |
+| `adversarial-machine-learning` | FGSM/PGD/C&W adversarial examples reference |
+| `shannon-ai-pentester` | AI-driven pentest workflow (⚠ High Risk — review before use) |
+| `skill-vetter` | Audit installed skills before trusting them with agent permissions |
 
 Full decision tree and per-skill notes: [`CLAUDE.md`](./CLAUDE.md). Quick mid-CTF lookup: [`notes/skills-cheatsheet.md`](./notes/skills-cheatsheet.md).
 

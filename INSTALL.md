@@ -149,6 +149,38 @@ For challenges that require connecting to THM VMs:
 sudo openvpn ~/Downloads/your-thm.ovpn
 ```
 
+### 4d. Optional: extended AI/security skills
+
+Pulled in via the `skills.sh` package manager (`npx skills`). Augments `/ctf-ai-ml` with dedicated taxonomies for prompt injection, OWASP LLM Top 10, adversarial ML, and a generic AI pentest workflow.
+
+```bash
+# AI/LLM offensive
+npx skills add hoodini/ai-agents-skills@owasp-security                       -g -y  # OWASP LLM Top 10 framework
+npx skills add yaklang/hack-skills@llm-prompt-injection                      -g -y  # dedicated prompt injection
+npx skills add semgrep/skills@llm-security                                   -g -y  # semgrep rules for LLM patterns
+npx skills add gmh5225/awesome-ai-security@adversarial-machine-learning      -g -y  # FGSM/PGD adversarial ML
+
+# Generic AI pentest / skill hygiene
+npx skills add aradotso/trending-skills@shannon-ai-pentester                 -g -y  # AI pentester workflow (HIGH RISK — review before use)
+npx skills add useai-pro/openclaw-skills-security@skill-vetter               -g -y  # audit installed skills for trust risks
+```
+
+Verify everything landed:
+
+```bash
+npx skills list -g
+```
+
+`list` shows installed skills (vs. `find` which searches the online catalog). Use `-g` for global (user-level), no flag for project-level.
+
+Notes:
+- `skills.sh` search results occasionally show **stale entries** for skills that were deleted upstream (we hit one: `letta-ai/skills@model-extraction-relu-logits` is gone). If `add` fails with "no matching skills", verify the source repo at `https://github.com/<owner>/<repo>` actually contains it.
+- For multi-skill packages (one repo, many skills), use `-s <skill-name>` to target a specific one:
+
+  ```bash
+  npx skills add letta-ai/skills -s some-skill-name -g -y
+  ```
+
 ---
 
 ## Step 5 — Customize the writeup skill

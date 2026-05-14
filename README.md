@@ -8,6 +8,7 @@
 
 ## Table of contents
 
+- [Install](#install)
 - [What's in here](#whats-in-here)
 - [Repository layout](#repository-layout)
 - [How writeups are written](#how-writeups-are-written)
@@ -17,6 +18,20 @@
 - [Quick links](#quick-links)
 - [Conventions](#conventions)
 - [Disclaimer](#disclaimer)
+
+## Install
+
+Forked the repo and want to run it? Full setup (Claude Code + CTF skill library + tooling) is in **[INSTALL.md](./INSTALL.md)**. TL;DR:
+
+```bash
+git clone git@github.com:<YOUR-USER>/THM-AI-Oddysei-hackaton-2026.git
+npm install -g @anthropic-ai/claude-code
+git clone https://github.com/ljagiello/ctf-skills.git ~/.claude/skills
+pip install torch transformers safetensors numpy scipy Pillow scikit-learn
+cd THM-AI-Oddysei-hackaton-2026 && claude
+```
+
+After cloning, **change the author info** in `thm-writeup` to yours — see [INSTALL.md § Step 5](./INSTALL.md#step-5--customize-the-writeup-skill).
 
 ---
 
@@ -135,6 +150,7 @@ Full index: [`writeups/README.md`](./writeups/README.md).
 
 ## Quick links
 
+- 🛠️ [Install guide](./INSTALL.md)
 - 📁 [All writeups](./writeups/README.md)
 - 🧰 [Writeup template](./writeups/_template/README.md)
 - 🤖 [Claude's instructions](./CLAUDE.md)

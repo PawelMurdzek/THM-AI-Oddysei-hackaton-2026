@@ -1,0 +1,192 @@
+# ─── Claude Code local state ────────────────────────────────
+.claude/settings.local.json
+.claude/.session/
+.claude/memory/
+
+# ─── OS / editors ──────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+.idea/
+.vscode/
+*.code-workspace
+.vs/
+
+# ─── Python ─────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+.venv/
+venv/
+env/
+.envrc
+
+# ─── Jupyter (AI/ML notes) ──────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb~
+
+# ─── Node ───────────────────────────────────────────────────
+node_modules/
+.pnpm-store/
+.yarn/cache/
+
+# ─── Secrets — NEVER commit ─────────────────────────────────
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+credentials.json
+secrets.yml
+secrets.yaml
+cookies.txt
+auth.json
+.netrc
+known_hosts
+id_rsa
+id_rsa.pub
+id_ed25519
+id_ed25519.pub
+*.token
+*ctf_token*
+CTF_TOKEN*
+
+# ─── CTF scratch / loot (work-in-progress, not for archive) ─
+scratch/
+loot/
+tmp/
+wip/
+*.local.md
+*.scratch.md
+DRAFT_*.md
+playground/
+
+# ─── Recon / scan output ────────────────────────────────────
+nmap-*.xml
+nmap-*.nmap
+nmap-*.gnmap
+masscan-*.txt
+gobuster-*.txt
+ffuf-*.json
+nikto-*.txt
+nuclei-*.txt
+sqlmap-output/
+amass-*.txt
+subfinder-*.txt
+httpx-*.txt
+dirsearch-*.txt
+
+# ─── Network captures ──────────────────────────────────────
+*.pcap
+*.pcapng
+*.cap
+*.har
+mitmproxy-flows
+mitmdump-*.log
+burp/
+*.burp
+*.burpsuite
+
+# ─── Reverse engineering artifacts ──────────────────────────
+*.gpr             # Ghidra project
+*.gpr.lock
+ghidra_*/        # Ghidra workspace
+*.i64             # IDA Pro database
+*.idb
+*.id0
+*.id1
+*.id2
+*.nam
+*.til
+*.bndb            # Binary Ninja
+.r2_history       # radare2
+*.rr              # rr replay traces
+
+# ─── Pwn / exploitation ─────────────────────────────────────
+core
+core.*
+*.core
+peda-session-*.txt
+gdb-history
+pwntools-cache/
+.pwn-cache/
+
+# ─── Cryptography / cracking ────────────────────────────────
+*.pot              # john / hashcat pot files
+john.log
+john.rec
+hashcat.potfile
+hashcat.log
+*.restore
+*.dictstat2
+sessions/         # hashcat sessions
+
+# ─── Wordlists (download locally, don't commit) ─────────────
+rockyou.txt
+wordlists/
+SecLists/
+*.wordlist
+
+# ─── AI / ML model artifacts (HUGE, keep out of git) ────────
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.gguf
+*.onnx
+*.ckpt
+*.h5
+*.hdf5
+*.pkl
+*.joblib
+*.tflite
+*.pb
+*.npz
+checkpoints/
+runs/
+wandb/
+mlruns/
+lightning_logs/
+.cache/huggingface/
+~/.cache/huggingface/
+
+# ─── Vector DBs / embeddings cache (challenge-specific) ─────
+chroma_db/
+*.chroma
+*.faiss
+*.usearch
+embeddings_cache/
+*.embeddings
+
+# ─── Datasets (challenge inputs can be big) ─────────────────
+data/raw/
+data/external/
+*.parquet
+*.arrow
+*.feather
+
+# ─── Docker / VMs ───────────────────────────────────────────
+.docker/
+docker-compose.override.yml
+*.qcow2
+*.vmdk
+*.vdi
+
+# ─── Generic temp / archive ─────────────────────────────────
+*.tmp
+*.bak
+*.orig
+*.rej
+*.log
+*~

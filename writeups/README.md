@@ -20,6 +20,17 @@ All challenges I tackled during the event. Authored by **Paweł Murdzek** with C
 - **LLM RCE** — code-exec via tool use, sandbox escapes, eval-style sinks
 - **Adversarial** — text/image perturbations, classifier evasion
 
+## Named challenges (per THM teasers)
+
+These were name-dropped on the event page before it opened:
+
+- **Vectara**
+- **Token City**
+- **Injectus IX**
+- **Cypheron**
+
+(More to come once the event opens — I'll add them here as I encounter them.)
+
 ## Folder layout
 
 ```

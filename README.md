@@ -4,6 +4,21 @@
 >
 > Authored by **Paweł Murdzek** &lt;`pawel.murdzek@gmail.com`&gt; — solo competitor, paired with **Claude (Opus 4.7)** for note-taking, recon analysis, and writeup drafting.
 
+## About the event
+
+| | |
+|---|---|
+| **Event** | TryHackMe — AI Odyssey 2026 |
+| **Dates** | May 14–17, 2026 |
+| **Format** | Global CTF, solo or teams up to 4 |
+| **Entry** | Free with a TryHackMe account |
+| **Scope** | "From prompt injection to agentic AI" |
+| **Prep path** | [TryHackMe AI Security Path](https://tryhackme.com) (run before the CTF) |
+| **Named challenges (publicly teased)** | `Vectara`, `Token City`, `Injectus IX`, `Cypheron` |
+| **Prizes** | Top-3 teams: cert attempt + 1y Premium + T-shirt; raffle pool for all participants |
+
+My setup: **solo entry**, no team. Co-pilot is Claude (Opus 4.7) — see [CLAUDE.md](./CLAUDE.md) for the rules of engagement.
+
 ---
 
 ## Table of contents
